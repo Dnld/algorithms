@@ -1,4 +1,6 @@
-var arr = [1,2,3,4,5,6,7,8]
+import Darwin
+
+var arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
 
 func binarySearch(input: [Int], key: Int, inputMax: Int, inputMin: Int = 0) {
     let midIndex : Double = round(Double((inputMax + inputMin) / 2))
@@ -6,13 +8,11 @@ func binarySearch(input: [Int], key: Int, inputMax: Int, inputMin: Int = 0) {
     
     if midNumber > key {
         binarySearch(input, key: key, inputMax: Int(midIndex) - 1, inputMin: inputMin)
-    } else if (midNumber < key ) {
+    } else if midNumber < key {
         binarySearch(input, key: key, inputMax: inputMax, inputMin: Int(midIndex) + 1)
-    }
-    else {
+    } else {
         print("\(key) found")
-    }
-    
+    }     
 }
 
 binarySearch(arr, key: 3, inputMax: arr.count)
