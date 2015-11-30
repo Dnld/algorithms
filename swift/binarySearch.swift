@@ -6,8 +6,7 @@ func binarySearch(input: [Int], key: Int, inputMax: Int, inputMin: Int = 0) {
     
     if midNumber > key {
         binarySearch(input, key: key, inputMax: Int(midIndex) - 1, inputMin: inputMin)
-    }
-    else if (midNumber < key ) {
+    } else if (midNumber < key ) {
         binarySearch(input, key: key, inputMax: inputMax, inputMin: Int(midIndex) + 1)
     }
     else {
