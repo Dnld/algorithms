@@ -1,9 +1,9 @@
 var arr = [12,2,1,6,15,13,8,14,3,9,16,5,10,4,7,11]
 
-func insertionSort(var input: [Int]) -> [Int]{
+func insertionSort(var input: [Int]) -> [Int] {
     var item, i: Int
     
-    outer: for x in 0..<input.count {
+    for x in 0..<input.count {
         item = input[x]
         for i = x; i >= 0; i-- {
             if item < input[i] {
